@@ -16,10 +16,10 @@ mongoose.connect(
 
 //routes
 const contacts = require("./routes/contacts");
+app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(cors());
 // app.get("/", (req, res) => {
 //   res.send("Haloo Ini ");
 // });
