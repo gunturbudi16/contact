@@ -6,9 +6,13 @@ const cors = require("cors");
 const dbName = "contact";
 const app = express();
 
-mongoose.connect(`mongodb://localhost:27017/${dbName}`, {
-  useNewUrlParser: true
-});
+mongoose.connect(
+  `mongodb+srv://guntur:123456abcd@cluster0-nvvg4.gcp.mongodb.net/${dbName}`,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  }
+);
 
 //routes
 const contacts = require("./routes/contacts");
