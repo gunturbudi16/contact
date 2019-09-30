@@ -25,7 +25,7 @@ app.use(cors());
 // });
 app.use("/", contacts);
 
-const port = 2999;
+const port = 3000;
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
 });
