@@ -9,7 +9,7 @@ class contactController {
       name: req.body.name,
       phone: req.body.phone,
       company: req.body.company,
-      active: Boolean(req.body.active) || true
+      active: Boolean(req.body.active)
     };
 
     console.log(newData);
