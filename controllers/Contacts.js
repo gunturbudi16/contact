@@ -16,8 +16,6 @@ class contactController {
 
     Contact.create(newData)
       .then(response => {
-        console.log(response, "response");
-
         res.status(200).json({
           message: "New Contact has been Created",
           response
@@ -55,11 +53,12 @@ class contactController {
   }
   static update(req, res) {
     //res.send("Halo ini dari controller");
+
     const newData = {
       name: req.body.name,
       phone: req.body.phone,
       company: req.body.company,
-      active: Boolean(req.body.active) || true
+      active: req.body.active == "true" || req.body.active == "" ? true : false
     };
     const contactid = req.params.id;
     Contact.findByIdAndUpdate(contactid, newData)

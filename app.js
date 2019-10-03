@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 // });
 app.use("/", contacts);
 //https://gunturcontact16.herokuapp.com
-const port = process.env.PORT || 3002;
+const port = process.env.PORT || 2999;
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
 });
